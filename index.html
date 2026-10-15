@@ -4,58 +4,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Charvika Designs creates modern websites for restaurants, boutiques and businesses.">
-  <title>Charvika Designs | Creative Web Design Studio</title>
+  <meta name="theme-color" content="#6d28d9">
+  <meta name="description" content="Charvika Designs creates beautiful websites and digital designs for businesses, restaurants, boutiques, and brands.">
+  <title>Charvika Designs | Creative Websites for Your Brand</title>
 
   <style>
     :root {
-      --primary: #7048e8;
-      --primary-dark: #5632c4;
-      --dark: #19172b;
-      --muted: #6f7082;
-      --light: #f8f7ff;
+      --purple: #6d28d9;
+      --purple-dark: #3b0764;
+      --pink: #ec4899;
+      --lavender: #f5f0ff;
+      --ink: #241b35;
+      --muted: #6b6478;
       --white: #ffffff;
+      --radius: 22px;
+      --shadow: 0 14px 40px rgba(69, 34, 120, 0.10);
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 100px;
+      scroll-padding-top: 90px;
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--dark);
-      background: white;
-      line-height: 1.6;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      line-height: 1.65;
+      background: #fff;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
-    /* HEADER */
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 1000;
-      width: 100%;
-      background: rgba(255,255,255,0.97);
-      border-bottom: 1px solid #efedf7;
-      backdrop-filter: blur(12px);
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid #eee8f8;
     }
 
-    .header-inner {
-      max-width: 1180px;
-      min-height: 78px;
-      margin: auto;
-      padding: 14px 24px;
+    .nav {
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -66,918 +74,840 @@
       display: flex;
       align-items: center;
       gap: 11px;
-      flex-shrink: 0;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--purple-dark);
     }
 
-    .brand-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #8b68ff, #5632c4);
+    .brand-mark {
+      width: 43px;
+      height: 43px;
+      border-radius: 15px;
       display: grid;
       place-items: center;
       color: white;
-      font-size: 22px;
-      font-weight: 800;
+      font-size: 1.45rem;
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+      box-shadow: 0 7px 18px #6d28d933;
     }
 
-    .brand-name {
-      font-size: 21px;
-      font-weight: 800;
-      letter-spacing: -0.8px;
-      line-height: 1.2;
-    }
-
-    .brand-name span {
-      color: var(--primary);
-    }
-
-    .brand-tagline {
-      display: block;
-      font-size: 10px;
-      color: var(--muted);
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-top: 4px;
-    }
-
-    .main-nav {
+    .nav-links {
       display: flex;
       align-items: center;
-      gap: 25px;
-    }
-
-    .main-nav a {
-      color: #555468;
-      font-size: 14px;
+      gap: 27px;
+      font-size: 0.95rem;
       font-weight: 600;
-      transition: color 0.2s;
     }
 
-    .main-nav a:hover {
-      color: var(--primary);
+    .nav-links a:hover {
+      color: var(--purple);
     }
 
-    .main-nav .nav-cta {
-      padding: 10px 17px;
-      background: var(--primary);
-      color: white;
-      border-radius: 9px;
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: var(--lavender);
+      color: var(--purple-dark);
+      border-radius: 10px;
+      padding: 9px 12px;
+      cursor: pointer;
     }
 
-    .main-nav .nav-cta:hover {
-      background: var(--primary-dark);
-      color: white;
-    }
-
-    /* BANNER SLIDER */
-    .banner-slider {
+    .hero {
       position: relative;
       overflow: hidden;
-      background: #f8f6ff;
-    }
-
-    .banner-slide {
-      display: none;
+      color: white;
       background:
-        radial-gradient(circle at 85% 20%, rgba(189,170,255,0.36), transparent 32%),
-        linear-gradient(120deg, #fbfaff, #f2efff 55%, #f9f7ff);
-      animation: bannerFade 0.5s ease;
-    }
-
-    .banner-slide.active {
-      display: block;
-    }
-
-    @keyframes bannerFade {
-      from { opacity: 0.45; }
-      to { opacity: 1; }
+        radial-gradient(circle at 85% 20%, #f472b655, transparent 30%),
+        radial-gradient(circle at 10% 90%, #a78bfa66, transparent 35%),
+        linear-gradient(125deg, #2e1065, #6d28d9 57%, #a21caf);
     }
 
     .hero-inner {
-      max-width: 1180px;
-      min-height: 510px;
-      margin: auto;
-      padding: 65px 24px 85px;
+      min-height: 535px;
+      padding-top: 85px;
+      padding-bottom: 85px;
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 1.2fr 0.8fr;
       align-items: center;
-      gap: 50px;
-    }
-
-    .hero-content {
-      max-width: 580px;
+      gap: 45px;
     }
 
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      padding: 8px 13px;
-      border: 1px solid #e5ddff;
-      background: white;
-      border-radius: 30px;
-      color: var(--primary-dark);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.8px;
+      display: inline-block;
+      padding: 7px 14px;
+      border: 1px solid #ffffff50;
+      border-radius: 99px;
+      background: #ffffff12;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
       margin-bottom: 22px;
     }
 
-    .eyebrow-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--primary);
-    }
-
     .hero h1 {
-      font-size: clamp(38px, 4.5vw, 60px);
-      line-height: 1.12;
-      letter-spacing: -2px;
-      font-weight: 800;
-      margin-bottom: 20px;
+      font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+      max-width: 700px;
+      margin-bottom: 22px;
     }
 
-    .hero h1 span {
-      color: var(--primary);
-    }
-
-    .hero-description {
-      max-width: 490px;
-      color: #66657b;
-      font-size: 16px;
-      line-height: 1.9;
-      margin-bottom: 27px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+    .hero-copy {
+      max-width: 570px;
+      color: #f3eaff;
+      font-size: 1.12rem;
+      margin-bottom: 30px;
     }
 
     .button {
       display: inline-flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       gap: 8px;
-      padding: 13px 20px;
-      border-radius: 10px;
-      font-size: 14px;
-      font-weight: 700;
-      transition: transform 0.2s, background 0.2s;
+      border: 0;
+      border-radius: 999px;
+      padding: 13px 23px;
+      background: white;
+      color: var(--purple-dark);
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .button:hover {
       transform: translateY(-3px);
+      box-shadow: 0 10px 25px #1e063b35;
     }
 
     .button-primary {
       color: white;
-      background: var(--primary);
-      box-shadow: 0 8px 20px rgba(112,72,232,0.2);
-    }
-
-    .button-primary:hover {
-      background: var(--primary-dark);
-    }
-
-    .button-secondary {
-      color: var(--dark);
-      background: white;
-      border: 1px solid #e4def7;
+      background: linear-gradient(120deg, var(--purple), var(--pink));
     }
 
     .hero-visual {
       position: relative;
-      min-width: 0;
-    }
-
-    .visual-frame {
-      padding: 11px;
-      background: white;
-      border: 1px solid #eee8ff;
-      border-radius: 20px;
-      box-shadow: 0 25px 55px rgba(70,48,140,0.15);
-    }
-
-    .visual-image {
-      display: block;
-      width: 100%;
-      height: 320px;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 13px;
-    }
-
-    .visual-label {
-      position: absolute;
-      bottom: -17px;
-      right: -10px;
-      padding: 12px 17px;
-      border: 1px solid #f0edf8;
-      border-radius: 12px;
-      background: white;
-      box-shadow: 0 10px 30px rgba(47,33,93,0.12);
-      color: var(--dark);
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    /* SLIDER CONTROLS */
-    .slider-controls {
-      position: absolute;
-      bottom: 19px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 17px;
-      z-index: 5;
-    }
-
-    .slider-arrow {
-      width: 35px;
-      height: 35px;
+      min-height: 330px;
       display: grid;
       place-items: center;
-      border: 1px solid #e3dcfa;
-      border-radius: 50%;
-      background: white;
-      color: var(--primary);
-      font-size: 23px;
-      cursor: pointer;
     }
 
-    .slider-arrow:hover {
-      background: var(--primary);
-      color: white;
+    .design-card {
+      width: min(100%, 360px);
+      min-height: 270px;
+      padding: 26px;
+      border: 1px solid #ffffff55;
+      border-radius: 30px;
+      background: linear-gradient(145deg, #ffffff25, #ffffff0a);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 25px 65px #20033b45;
+      transform: rotate(3deg);
+      animation: float 5s ease-in-out infinite;
     }
 
-    .slider-dots {
+    .design-card-top {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 8px;
+      margin-bottom: 32px;
     }
 
-    .slider-dot {
+    .design-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .design-dots span {
       width: 9px;
       height: 9px;
-      padding: 0;
-      border: none;
-      border-radius: 20px;
-      background: #c9c0e9;
+      border-radius: 50%;
+      background: #ffffffb0;
+    }
+
+    .design-symbol {
+      width: 72px;
+      height: 72px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+      border-radius: 23px;
+      background: linear-gradient(135deg, #f9a8d4, #c4b5fd);
+      color: #3b0764;
+      font-size: 2.4rem;
+      font-weight: 900;
+    }
+
+    .design-card h3 {
+      font-size: 1.7rem;
+      margin-bottom: 6px;
+    }
+
+    .design-card p {
+      color: #f1e8ff;
+    }
+
+    .hero-dots {
+      display: flex;
+      gap: 9px;
+      margin-top: 28px;
+    }
+
+    .hero-dot {
+      width: 10px;
+      height: 10px;
+      border: 0;
+      border-radius: 50%;
+      background: #ffffff75;
       cursor: pointer;
     }
 
-    .slider-dot.active {
-      width: 24px;
-      background: var(--primary);
-    }
-
-    /* SERVICES */
-    .services {
-      padding: 78px 24px;
+    .hero-dot.active {
+      width: 28px;
+      border-radius: 20px;
       background: white;
     }
 
-    .section-container {
-      max-width: 1180px;
-      margin: auto;
+    .section {
+      padding: 85px 0;
+    }
+
+    .section-soft {
+      background: var(--lavender);
     }
 
     .section-heading {
-      max-width: 650px;
-      margin: 0 auto 40px;
+      max-width: 680px;
+      margin: 0 auto 42px;
       text-align: center;
     }
 
-    .section-label {
-      color: var(--primary);
-      font-size: 12px;
+    .section-kicker {
+      color: var(--purple);
+      font-size: 0.83rem;
       font-weight: 800;
-      letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      letter-spacing: 0.13em;
     }
 
     .section-heading h2 {
-      font-size: clamp(29px, 4vw, 40px);
-      line-height: 1.25;
-      letter-spacing: -1px;
-      margin-bottom: 13px;
+      margin: 9px 0 12px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      letter-spacing: -0.035em;
     }
 
     .section-heading p {
       color: var(--muted);
-      font-size: 15px;
     }
 
-    .service-grid {
+    .services-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 25px;
+      gap: 23px;
     }
 
     .service-card {
-      min-width: 0;
       overflow: hidden;
+      border: 1px solid #eee7f7;
+      border-radius: var(--radius);
       background: white;
-      border: 1px solid #eeecf5;
-      border-radius: 16px;
+      box-shadow: var(--shadow);
       transition: transform 0.25s, box-shadow 0.25s;
     }
 
     .service-card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 16px 35px rgba(35,24,74,0.09);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px #46227718;
     }
 
     .service-image {
-      display: block;
+      min-height: 150px;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: linear-gradient(135deg, #ede9fe, #fce7f3);
+      color: var(--purple);
+      font-size: 3.1rem;
+    }
+
+    .service-image img {
       width: 100%;
-      height: 190px;
+      height: 170px;
       object-fit: cover;
+      border-radius: 12px;
     }
 
     .service-content {
-      padding: 22px;
+      padding: 23px;
     }
 
     .service-content h3 {
-      font-size: 18px;
-      line-height: 1.4;
-      margin-bottom: 9px;
+      font-size: 1.18rem;
+      line-height: 1.35;
+      margin-bottom: 10px;
     }
 
     .service-content p {
+      min-height: 52px;
       color: var(--muted);
-      font-size: 14px;
-      line-height: 1.8;
-      margin-bottom: 15px;
+      font-size: 0.95rem;
     }
 
-    .service-link {
-      color: var(--primary);
-      font-size: 13px;
+    .service-price {
+      margin-top: 16px;
+      color: var(--purple);
       font-weight: 800;
     }
 
-    /* ABOUT */
-    .about-section {
-      padding: 75px 24px;
-      background: var(--light);
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: center;
+      gap: 55px;
     }
 
-    .about-content {
-      max-width: 750px;
-      margin: auto;
+    .about-art {
+      min-height: 350px;
+      display: grid;
+      place-items: center;
+      padding: 30px;
+      border-radius: 32px;
+      background:
+        radial-gradient(circle at 15% 20%, #f9a8d4, transparent 35%),
+        linear-gradient(145deg, #ddd6fe, #f5d0fe);
+    }
+
+    .about-art-inner {
+      width: 100%;
+      max-width: 310px;
+      padding: 32px;
+      border: 1px solid #ffffffb0;
+      border-radius: 24px;
+      background: #ffffffbd;
+      box-shadow: 0 20px 40px #4c1d951a;
       text-align: center;
     }
 
-    .about-content h2 {
-      font-size: clamp(29px, 4vw, 40px);
-      margin-bottom: 15px;
-      line-height: 1.3;
+    .about-art-inner .brand-mark {
+      margin: 0 auto 16px;
+      width: 68px;
+      height: 68px;
+      font-size: 2rem;
     }
 
-    .about-content p {
+    .about-copy h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.2;
+      margin: 12px 0 20px;
+    }
+
+    .about-copy p {
       color: var(--muted);
-      font-size: 15px;
-      line-height: 1.9;
+      margin-bottom: 24px;
+      white-space: pre-line;
     }
 
-    /* CONTACT */
-    .contact-section {
-      padding: 30px 24px 75px;
-    }
-
-    .contact-banner {
-      max-width: 1180px;
-      margin: auto;
-      padding: 48px 25px;
-      border-radius: 22px;
-      text-align: center;
+    .contact {
       color: white;
-      background: linear-gradient(120deg, #7048e8, #5632c4);
+      text-align: center;
+      background: linear-gradient(125deg, #3b0764, #7e22ce, #be185d);
     }
 
-    .contact-banner h2 {
-      font-size: clamp(27px, 4vw, 39px);
-      line-height: 1.3;
-      margin-bottom: 12px;
+    .contact .section-kicker {
+      color: #f5d0fe;
     }
 
-    .contact-banner p {
-      max-width: 570px;
-      margin: 0 auto 23px;
-      color: #eee8ff;
-      font-size: 15px;
+    .contact h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 10px 0 14px;
     }
 
-    .contact-banner .button {
-      background: white;
-      color: var(--primary-dark);
+    .contact p {
+      max-width: 600px;
+      margin: 0 auto 25px;
+      color: #f3e8ff;
     }
 
-    /* FOOTER */
-    .site-footer {
-      padding: 25px 20px;
-      border-top: 1px solid #eeecf5;
+    footer {
+      padding: 25px 0;
+      background: #210d37;
+      color: #e9ddf8;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .footer-note {
+      color: #c8b8db;
+      margin-top: 5px;
+      font-size: 0.8rem;
+    }
+
+    .empty-state {
+      grid-column: 1 / -1;
+      padding: 30px;
       text-align: center;
       color: var(--muted);
-      font-size: 13px;
     }
 
-    .site-footer strong {
-      color: var(--primary);
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(3deg); }
+      50% { transform: translateY(-12px) rotate(1deg); }
     }
 
-    /* TABLET */
-    @media (max-width: 900px) {
-      .main-nav {
-        gap: 15px;
-      }
-
+    @media (max-width: 850px) {
       .hero-inner {
-        gap: 28px;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-top: 65px;
+        padding-bottom: 55px;
       }
 
-      .hero h1 {
-        font-size: 43px;
+      .hero-visual {
+        min-height: 280px;
       }
 
-      .visual-image {
-        height: 270px;
-      }
-
-      .service-grid {
+      .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .about-art {
+        min-height: 290px;
+      }
     }
 
-    /* MOBILE */
-    @media (max-width: 650px) {
-      .header-inner {
-        padding: 13px 16px;
-        flex-wrap: wrap;
-        gap: 12px;
+    @media (max-width: 600px) {
+      .nav {
+        min-height: 68px;
       }
 
-      .brand-icon {
-        width: 39px;
-        height: 39px;
-        border-radius: 12px;
+      .menu-toggle {
+        display: block;
       }
 
-      .brand-name {
-        font-size: 19px;
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 20px 5%;
+        background: white;
+        border-bottom: 1px solid #eee8f8;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 17px;
       }
 
-      .main-nav {
-        width: 100%;
-        justify-content: space-between;
-        gap: 8px;
-        padding-top: 11px;
-        border-top: 1px solid #f0edf8;
+      .nav-links.open {
+        display: flex;
       }
 
-      .main-nav a {
-        font-size: 12px;
-      }
-
-      .main-nav .nav-cta {
-        padding: 8px 10px;
-      }
-
-      .hero-inner {
-        grid-template-columns: 1fr;
-        padding: 45px 20px 82px;
-        gap: 28px;
+      .brand {
+        font-size: 1.02rem;
       }
 
       .hero h1 {
-        font-size: 41px;
-        letter-spacing: -1.5px;
+        font-size: 2.65rem;
       }
 
-      .hero-description {
-        font-size: 15px;
+      .hero-copy {
+        font-size: 1rem;
       }
 
-      .visual-image {
-        height: 240px;
+      .section {
+        padding: 62px 0;
       }
 
-      .services {
-        padding: 58px 18px;
-      }
-
-      .service-grid {
+      .services-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
       }
 
-      .service-image {
-        height: 210px;
+      .service-content p {
+        min-height: 0;
       }
 
-      .about-section {
-        padding: 58px 20px;
-      }
-
-      .contact-section {
-        padding: 15px 18px 55px;
-      }
-
-      .contact-banner {
-        padding: 38px 20px;
+      .design-card {
+        transform: none;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
       *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
       }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- HEADER -->
   <header class="site-header">
-    <div class="header-inner">
-
-      <a href="#home" class="brand" aria-label="Charvika Designs home">
-        <div class="brand-icon">C</div>
-        <div>
-          <div class="brand-name">Charvika <span>Designs</span></div>
-          <span class="brand-tagline">Creative Digital Studio</span>
-        </div>
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Charvika Designs home">
+        <span class="brand-mark">C</span>
+        <span>Charvika Designs</span>
       </a>
 
-      <nav class="main-nav" aria-label="Main navigation">
+      <button class="menu-toggle" id="menuToggle"
+        aria-expanded="false" aria-controls="navLinks">
+        Menu ☰
+      </button>
+
+      <div class="nav-links" id="navLinks">
         <a href="#home">Home</a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
-        <a href="#contact" class="nav-cta">Let's Talk ↗</a>
-      </nav>
-
-    </div>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
   </header>
 
   <main>
-
-    <!-- BANNER SLIDER -->
     <section class="hero" id="home">
-      <div class="banner-slider" id="bannerSlider">
+      <div class="container hero-inner">
+        <div>
+          <span class="eyebrow" id="heroEyebrow">DESIGN · CREATE · GROW</span>
+          <h1 id="heroTitle">Creative Websites for Your Brand</h1>
+          <p class="hero-copy" id="heroSubtitle">
+            Beautiful websites and digital designs by Charvika Designs
+          </p>
+          <a class="button" href="#services">Explore Our Services ↗</a>
 
-        <!-- BANNER 1 -->
-        <div class="banner-slide active">
-          <div class="hero-inner">
-            <div class="hero-content">
-              <div class="eyebrow">
-                <span class="eyebrow-dot"></span>
-                CREATIVE WEB DESIGN STUDIO
-              </div>
-
-              <h1>Your Ideas.<br>Our Design.<br><span>Your Success.</span></h1>
-
-              <p class="hero-description">
-                We create beautiful, modern and mobile-friendly websites
-                that help your business stand out and grow online.
-              </p>
-
-              <div class="hero-buttons">
-                <a href="#services" class="button button-primary">
-                  Explore Services →
-                </a>
-                <a href="#contact" class="button button-secondary">
-                  Discuss Your Project ↗
-                </a>
-              </div>
-            </div>
-
-            <div class="hero-visual">
-              <div class="visual-frame">
-                <img
-                  class="visual-image"
-                  src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1000&q=85"
-                  alt="Modern website design displayed on a computer"
-                  fetchpriority="high"
-                >
-              </div>
-              <div class="visual-label">✦ Creative Website Design</div>
-            </div>
+          <div class="hero-dots" aria-label="Hero banner selector">
+            <button class="hero-dot active" aria-label="Banner 1" data-slide="0"></button>
+            <button class="hero-dot" aria-label="Banner 2" data-slide="1"></button>
+            <button class="hero-dot" aria-label="Banner 3" data-slide="2"></button>
           </div>
         </div>
 
-        <!-- BANNER 2 -->
-        <div class="banner-slide">
-          <div class="hero-inner">
-            <div class="hero-content">
-              <div class="eyebrow">
-                <span class="eyebrow-dot"></span>
-                FOR RESTAURANTS & CAFES
-              </div>
-
-              <h1>Make Your Brand<br><span>Stand Out Online.</span></h1>
-
-              <p class="hero-description">
-                Beautiful websites and digital menu designs for restaurants,
-                cafes and food businesses.
-              </p>
-
-              <div class="hero-buttons">
-                <a href="#services" class="button button-primary">
-                  View Our Services →
-                </a>
-                <a href="#contact" class="button button-secondary">
-                  Discuss Your Project ↗
-                </a>
-              </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="design-card">
+            <div class="design-card-top">
+              <strong>CHARVIKA ✦</strong>
+              <div class="design-dots"><span></span><span></span><span></span></div>
             </div>
-
-            <div class="hero-visual">
-              <div class="visual-frame">
-                <img
-                  class="visual-image"
-                  src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85"
-                  alt="Restaurant food and dining"
-                  loading="lazy"
-                >
-              </div>
-              <div class="visual-label">✦ Websites for Food Businesses</div>
-            </div>
+            <div class="design-symbol">C</div>
+            <h3 id="visualTitle">Your Brand, Beautifully Designed</h3>
+            <p>Creative ideas. Thoughtful design. Digital growth.</p>
           </div>
         </div>
-
-        <!-- BANNER 3 -->
-        <div class="banner-slide">
-          <div class="hero-inner">
-            <div class="hero-content">
-              <div class="eyebrow">
-                <span class="eyebrow-dot"></span>
-                YOUR BUSINESS, YOUR WEBSITE
-              </div>
-
-              <h1>Build Your Brand.<br><span>Grow Your Business.</span></h1>
-
-              <p class="hero-description">
-                Professional websites for small businesses, boutiques and
-                growing brands. Let's bring your ideas to life.
-              </p>
-
-              <div class="hero-buttons">
-                <a href="#services" class="button button-primary">
-                  Explore Services →
-                </a>
-                <a href="#contact" class="button button-secondary">
-                  Let's Talk ↗
-                </a>
-              </div>
-            </div>
-
-            <div class="hero-visual">
-              <div class="visual-frame">
-                <img
-                  class="visual-image"
-                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85"
-                  alt="Modern business workspace"
-                  loading="lazy"
-                >
-              </div>
-              <div class="visual-label">✦ Professional Business Websites</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SLIDER ARROWS AND DOTS -->
-        <div class="slider-controls">
-          <button type="button" class="slider-arrow" id="prevBanner"
-            aria-label="Previous banner">‹</button>
-
-          <div class="slider-dots" id="sliderDots">
-            <button type="button" class="slider-dot active"
-              aria-label="Show banner 1" aria-current="true"></button>
-            <button type="button" class="slider-dot"
-              aria-label="Show banner 2"></button>
-            <button type="button" class="slider-dot"
-              aria-label="Show banner 3"></button>
-          </div>
-
-          <button type="button" class="slider-arrow" id="nextBanner"
-            aria-label="Next banner">›</button>
-        </div>
-
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section class="services" id="services">
-      <div class="section-container">
-
+    <section class="section" id="services">
+      <div class="container">
         <div class="section-heading">
-          <div class="section-label">What We Do</div>
-          <h2>Our Creative Services</h2>
-          <p>
-            Everything you need to build a strong and professional
-            online presence for your business.
-          </p>
+          <span class="section-kicker">What we do</span>
+          <h2>Creative Services for Your Business</h2>
+          <p>Thoughtful digital solutions to help your brand stand out and grow online.</p>
         </div>
 
-        <div class="service-grid">
-
+        <div class="services-grid" id="servicesGrid">
           <article class="service-card">
-            <img class="service-image"
-              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
-              alt="Restaurant interior" loading="lazy">
+            <div class="service-image">✦</div>
             <div class="service-content">
               <h3>Restaurant Websites</h3>
-              <p>Attractive websites featuring your menu, food, location and contact details.</p>
-              <a class="service-link" href="#contact">Get Started →</a>
+              <p>Beautiful websites for restaurants and cafes.</p>
             </div>
           </article>
-
           <article class="service-card">
-            <img class="service-image"
-              src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80"
-              alt="Fashion and boutique clothing" loading="lazy">
+            <div class="service-image">✿</div>
             <div class="service-content">
-              <h3>Boutique & Fashion Websites</h3>
-              <p>Stylish online showcases for boutiques, clothing brands and fashion businesses.</p>
-              <a class="service-link" href="#contact">Get Started →</a>
+              <h3>Boutique &amp; Fashion Websites</h3>
+              <p>Stylish websites for boutiques and fashion brands.</p>
             </div>
           </article>
-
           <article class="service-card">
-            <img class="service-image"
-              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80"
-              alt="Modern professional workspace" loading="lazy">
+            <div class="service-image">◇</div>
             <div class="service-content">
               <h3>Business Websites</h3>
-              <p>Professional websites that introduce your business, services and brand to customers.</p>
-              <a class="service-link" href="#contact">Get Started →</a>
+              <p>Professional websites for businesses.</p>
             </div>
           </article>
+        </div>
+        <p id="servicesStatus" class="footer-note" style="text-align:center;margin-top:18px"></p>
+      </div>
+    </section>
 
-          <article class="service-card">
-            <img class="service-image"
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
-              alt="Working on a website using a laptop" loading="lazy">
-            <div class="service-content">
-              <h3>Website Maintenance</h3>
-              <p>Keep your website content updated, organized and looking professional.</p>
-              <a class="service-link" href="#contact">Get Started →</a>
-            </div>
-          </article>
+    <section class="section section-soft" id="about">
+      <div class="container about-grid">
+        <div class="about-art" aria-hidden="true">
+          <div class="about-art-inner">
+            <div class="brand-mark">C</div>
+            <h3>Ideas into Experiences</h3>
+            <p>Digital design with a personal touch.</p>
+          </div>
+        </div>
 
-          <article class="service-card">
-            <img class="service-image"
-              src="https://images.unsplash.com/photo-1611162616305-4b5f5d9a6b7e?auto=format&fit=crop&w=800&q=80"
-              alt="Social media and digital marketing" loading="lazy">
-            <div class="service-content">
-              <h3>Social Media Maintenance</h3>
-              <p>Support for keeping your social media presence consistent and engaging.</p>
-              <a class="service-link" href="#contact">Get Started →</a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <img class="service-image"
-              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80"
-              alt="Beautifully presented food" loading="lazy">
-            <div class="service-content">
-              <h3>Menu Card Design</h3>
-              <p>Eye-catching digital and printable menu designs for restaurants and cafes.</p>
-              <a class="service-link" href="#contact">Get Started →</a>
-            </div>
-          </article>
-
+        <div class="about-copy">
+          <span class="section-kicker">About us</span>
+          <h2>Helping Your Brand Shine Online</h2>
+          <p id="aboutText">We help businesses build a strong online presence.</p>
+          <a class="button button-primary" href="#contact">Let's Work Together ↗</a>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="about-section" id="about">
-      <div class="about-content">
-        <div class="section-label">About Charvika Designs</div>
-        <h2>Good Design Makes a Difference</h2>
-        <p>
-          Charvika Designs helps businesses create a polished online
-          presence through thoughtful website design, responsive layouts
-          and creative digital solutions. Our goal is to make your brand
-          look professional and help customers find you online.
-        </p>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact-section" id="contact">
-      <div class="contact-banner">
-        <h2>Ready to Bring Your Ideas Online?</h2>
-        <p>
-          Tell us about your business and the website you have in mind.
-          Let's create something that represents your brand.
-        </p>
-
-        <a
-          class="button"
-          href="https://www.instagram.com/charvika_designs/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Discuss Your Project ↗
+    <section class="section contact" id="contact">
+      <div class="container">
+        <span class="section-kicker">Have a project in mind?</span>
+        <h2>Let's Create Something Beautiful</h2>
+        <p>Tell us about your business and the website or digital design you need. We'd love to hear from you.</p>
+        <a class="button" id="instagramLink"
+           href="https://www.instagram.com/charvika_designs/"
+           target="_blank" rel="noopener noreferrer">
+          Connect on Instagram ↗
         </a>
       </div>
     </section>
-
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>
-      © <span id="current-year">2026</span>
-      <strong>Charvika Designs</strong>. All rights reserved.
-    </p>
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Charvika Designs. All rights reserved.</p>
+      <p class="footer-note">Designed with creativity and care.</p>
+    </div>
   </footer>
 
   <script>
-    // Automatically update the copyright year
-    document.getElementById("current-year").textContent =
-      new Date().getFullYear();
+    const API_BASE =
+      "https://soft-rice-ec58charvika-dashboard-api.rushithadabbiru4.workers.dev";
 
-    // BANNER SLIDER
-    const bannerSlides = document.querySelectorAll(".banner-slide");
-    const sliderDots = document.querySelectorAll(".slider-dot");
-    const prevBanner = document.getElementById("prevBanner");
-    const nextBanner = document.getElementById("nextBanner");
-    const bannerSlider = document.getElementById("bannerSlider");
+    const defaultContent = {
+      hero_title: "Creative Websites for Your Brand",
+      hero_subtitle: "Beautiful websites and digital designs by Charvika Designs",
+      about_text: "We help businesses build a strong online presence.",
+      contact_instagram: "https://www.instagram.com/charvika_designs/"
+    };
 
-    let currentBanner = 0;
-    let bannerTimer;
+    const bannerSlides = [
+      {
+        eyebrow: "DESIGN · CREATE · GROW",
+        visual: "Your Brand, Beautifully Designed"
+      },
+      {
+        eyebrow: "YOUR VISION · OUR CREATIVITY",
+        visual: "Digital Experiences Made for You"
+      },
+      {
+        eyebrow: "SMALL BUSINESS · BIG IDEAS",
+        visual: "Make Your Brand Stand Out"
+      }
+    ];
 
-    function showBanner(index) {
-      currentBanner =
-        (index + bannerSlides.length) % bannerSlides.length;
+    let currentSlide = 0;
+    let slideTimer;
 
-      bannerSlides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === currentBanner);
-      });
+    function setText(id, value) {
+      const element = document.getElementById(id);
+      if (element && typeof value === "string") {
+        element.textContent = value;
+      }
+    }
 
-      sliderDots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === currentBanner);
-        dot.setAttribute(
-          "aria-current",
-          i === currentBanner ? "true" : "false"
+    function setSafeInstagramLink(value) {
+      try {
+        const url = new URL(value);
+        if (url.protocol === "https:" &&
+            (url.hostname === "instagram.com" ||
+             url.hostname === "www.instagram.com")) {
+          document.getElementById("instagramLink").href = url.href;
+        }
+      } catch {
+        // Keep the default Instagram link.
+      }
+    }
+
+    async function loadWebsiteContent() {
+      try {
+        const response = await fetch(API_BASE + "/api/content", {
+          method: "GET",
+          mode: "cors",
+          cache: "no-store"
+        });
+
+        if (!response.ok) throw new Error("Content request failed");
+
+        const rows = await response.json();
+        const content = { ...defaultContent };
+
+        for (const row of rows) {
+          if (row && typeof row.content_key === "string" &&
+              typeof row.content_value === "string") {
+            content[row.content_key] = row.content_value;
+          }
+        }
+
+        setText("heroTitle", content.hero_title);
+        setText("heroSubtitle", content.hero_subtitle);
+        setText("aboutText", content.about_text);
+        setSafeInstagramLink(content.contact_instagram);
+      } catch (error) {
+        console.warn(
+          "Could not load live homepage content. Default text remains visible.",
+          error
         );
+      }
+    }
+
+    function makeServiceCard(service, index) {
+      const card = document.createElement("article");
+      card.className = "service-card";
+
+      const imageArea = document.createElement("div");
+      imageArea.className = "service-image";
+
+      const symbols = ["✦", "✿", "◇", "◎", "♡", "✧"];
+      const imageUrl = typeof service.image_url === "string"
+        ? service.image_url.trim()
+        : "";
+
+      if (imageUrl) {
+        try {
+          const image = new URL(imageUrl);
+          if (image.protocol === "https:" || image.protocol === "http:") {
+            const img = document.createElement("img");
+            img.src = image.href;
+            img.alt = service.title || "Charvika Designs service";
+            img.loading = "lazy";
+            img.onerror = () => {
+              imageArea.replaceChildren(
+                document.createTextNode(symbols[index % symbols.length])
+              );
+            };
+            imageArea.appendChild(img);
+          } else {
+            imageArea.textContent = symbols[index % symbols.length];
+          }
+        } catch {
+          imageArea.textContent = symbols[index % symbols.length];
+        }
+      } else {
+        imageArea.textContent = symbols[index % symbols.length];
+      }
+
+      const content = document.createElement("div");
+      content.className = "service-content";
+
+      const title = document.createElement("h3");
+      title.textContent = service.title || "Creative Service";
+
+      const description = document.createElement("p");
+      description.textContent = service.description || "";
+
+      content.append(title, description);
+
+      if (service.price) {
+        const price = document.createElement("div");
+        price.className = "service-price";
+        price.textContent = service.price;
+        content.appendChild(price);
+      }
+
+      card.append(imageArea, content);
+      return card;
+    }
+
+    async function loadServices() {
+      const grid = document.getElementById("servicesGrid");
+      const status = document.getElementById("servicesStatus");
+
+      try {
+        const response = await fetch(API_BASE + "/api/services", {
+          method: "GET",
+          mode: "cors",
+          cache: "no-store"
+        });
+
+        if (!response.ok) throw new Error("Services request failed");
+
+        const services = await response.json();
+        if (!Array.isArray(services)) throw new Error("Invalid services data");
+
+        const visibleServices = services.filter(service =>
+          Number(service.is_visible) === 1
+        );
+
+        if (visibleServices.length === 0) {
+          grid.replaceChildren();
+          const empty = document.createElement("p");
+          empty.className = "empty-state";
+          empty.textContent = "Our services will be listed here soon.";
+          grid.appendChild(empty);
+        } else {
+          grid.replaceChildren(
+            ...visibleServices.map(makeServiceCard)
+          );
+        }
+
+        status.textContent = "";
+      } catch (error) {
+        console.warn(
+          "Could not load live services. Default service cards remain visible.",
+          error
+        );
+        status.textContent =
+          "Showing sample services while live service data is unavailable.";
+      }
+    }
+
+    function showSlide(index) {
+      currentSlide = index;
+      const slide = bannerSlides[index];
+
+      setText("heroEyebrow", slide.eyebrow);
+      setText("visualTitle", slide.visual);
+
+      document.querySelectorAll(".hero-dot").forEach((dot, dotIndex) => {
+        dot.classList.toggle("active", dotIndex === index);
+        dot.setAttribute("aria-pressed", String(dotIndex === index));
       });
     }
 
-    function startBannerTimer() {
-      clearInterval(bannerTimer);
-
-      bannerTimer = setInterval(() => {
-        showBanner(currentBanner + 1);
+    function startSlideshow() {
+      clearInterval(slideTimer);
+      slideTimer = setInterval(() => {
+        showSlide((currentSlide + 1) % bannerSlides.length);
       }, 5000);
     }
 
-    prevBanner.addEventListener("click", () => {
-      showBanner(currentBanner - 1);
-      startBannerTimer();
-    });
-
-    nextBanner.addEventListener("click", () => {
-      showBanner(currentBanner + 1);
-      startBannerTimer();
-    });
-
-    sliderDots.forEach((dot, i) => {
+    document.querySelectorAll(".hero-dot").forEach(dot => {
       dot.addEventListener("click", () => {
-        showBanner(i);
-        startBannerTimer();
+        showSlide(Number(dot.dataset.slide));
+        startSlideshow();
       });
     });
 
-    // Pause automatic rotation while visitors interact with the slider
-    bannerSlider.addEventListener("mouseenter", () => {
-      clearInterval(bannerTimer);
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(open));
     });
 
-    bannerSlider.addEventListener("mouseleave", startBannerTimer);
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
 
-    showBanner(0);
-    startBannerTimer();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    showSlide(0);
+    startSlideshow();
+    loadWebsiteContent();
+    loadServices();
   </script>
-
 </body>
 </html>
+
 
