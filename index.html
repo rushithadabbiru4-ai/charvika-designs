@@ -29,7 +29,25 @@
             color: #d4af37;
             margin: 0;
         }
+.brand-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
 
+#site-logo {
+    max-width: 180px;
+    max-height: 90px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+#site-logo-text {
+    color: #d4af37;
+    margin: 0;
+}
         nav {
             margin-top: 15px;
         }
@@ -122,10 +140,14 @@
 
 <body>
 
-    <header>
-        <h1>Charvika Designs</h1>
+            <header>
+    <a href="#home" class="brand-link">
+        <img id="site-logo" src="" alt="Charvika Designs Logo"
+             style="display: none;">
+        <h1 id="site-logo-text">Charvika Designs</h1>
+    </a>
 
-        <nav>
+    <nav>
             <a href="#home">Home</a>
             <a href="#services">Services</a>
             <a href="#contact">Contact</a>
@@ -186,6 +208,45 @@
     <footer>
         <p>&copy; 2026 Charvika Designs. All rights reserved.</p>
     </footer>
+    <script>
+async function loadWebsiteImages() {
+    try {
+        const response = await fetch(
+            "https://soft-rice-ec58charvika-dashboard-api.rushithadabbiru4.workers.dev/api/content"
+        );
+
+        if (!response.ok) return;
+
+        const items = await response.json();
+
+        const content = {};
+        for (const item of items) {
+            content[item.content_key] = item.content_value;
+        }
+
+        const logo = document.getElementById("site-logo");
+        const logoText = document.getElementById("site-logo-text");
+
+        if (content.logo_image_url && logo && logoText) {
+            logo.onload = () => {
+                logo.style.display = "block";
+                logoText.style.display = "none";
+            };
+
+            logo.onerror = () => {
+                logo.style.display = "none";
+                logoText.style.display = "block";
+            };
+
+            logo.src = content.logo_image_url;
+        }
+    } catch (error) {
+        console.error("Could not load website logo:", error);
+    }
+}
+
+loadWebsiteImages();
+</script>
 
 </body>
 </html>
