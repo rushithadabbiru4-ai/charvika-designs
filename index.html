@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +8,11 @@
   <!-- SEO META TAGS -->
   <meta name="description" content="Charvika Designs creates affordable, modern and mobile-friendly websites for boutiques, restaurants and small businesses in India. Get a professional website for your business.">
   <meta name="theme-color" content="#EFF6FF">
+  <meta name="robots" content="index, follow">
 
   <title>Charvika Designs | Website Design for Small Businesses in India</title>
 
   <link rel="canonical" href="https://charvika-designs.pages.dev/">
-  <meta name="robots" content="index, follow">
 
   <!-- SOCIAL MEDIA PREVIEW -->
   <meta property="og:title" content="Charvika Designs | Creative Web Design Studio">
@@ -107,6 +108,7 @@
       height: 55px;
       object-fit: contain;
       border-radius: 10px;
+      background: white;
     }
 
     .brand-name {
@@ -521,16 +523,14 @@
     }
 
     /* CONTACT */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 35px;
-    }
-
     .contact-info {
       background: var(--light);
-      padding: 30px;
+      padding: 35px;
       border-radius: 20px;
+      max-width: 650px;
+      margin: auto;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(37, 99, 235, .05);
     }
 
     .contact-info h3 {
@@ -545,46 +545,20 @@
 
     .contact-item {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
+      justify-content: center;
       gap: 12px;
       margin: 20px 0;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 600;
     }
 
     .contact-item span {
-      font-size: 20px;
+      font-size: 23px;
     }
 
-    .contact-form {
-      display: grid;
-      gap: 15px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 15px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      font: inherit;
-      outline: none;
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, .1);
-    }
-
-    .contact-form textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    .contact-form button {
-      border: none;
-      width: fit-content;
+    .contact-item a:hover {
+      color: var(--primary);
     }
 
     /* FOOTER */
@@ -648,46 +622,6 @@
       color: #CBD5E1;
       font-size: 13px;
     }
-
-    <!-- CONTACT -->
-<section class="section" id="contact">
-  <div class="container">
-
-    <div class="section-heading">
-      <span class="section-tag">Contact Us</span>
-      <h2>Let's Discuss Your Project</h2>
-      <p>
-        Have an idea for your website? Connect with us
-        on Instagram to discuss your requirements.
-      </p>
-    </div>
-
-    <div class="contact-info">
-      <h3>Get in Touch</h3>
-      <p>
-        Tell us about your business and the kind of website
-        you would like to create.
-      </p>
-
-      <div class="contact-item">
-        <span>📸</span>
-        <div>
-          <a href="https://www.instagram.com/charvika_designs/"
-             target="_blank" rel="noopener noreferrer">
-            Connect with us on Instagram — @charvika_designs
-          </a>
-        </div>
-      </div>
-
-      <a href="https://www.instagram.com/charvika_designs/"
-         target="_blank" rel="noopener noreferrer"
-         class="btn btn-primary">
-        Contact Us on Instagram
-      </a>
-    </div>
-
-  </div>
-</section>
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
@@ -791,8 +725,7 @@
 
       .services-grid,
       .features-grid,
-      .about-grid,
-      .contact-grid {
+      .about-grid {
         grid-template-columns: 1fr;
       }
 
@@ -811,6 +744,10 @@
 
       .cta-section {
         padding: 60px 18px;
+      }
+
+      .contact-info {
+        padding: 25px 18px;
       }
     }
 
@@ -843,13 +780,18 @@
       <a href="#home" class="brand">
         <img
           id="siteLogo"
-          src="https://i.ibb.co/MxsHqTHV/Blue-Simple-Modern-Minimalist-Building-Company-Logo-1.png"
+          src="https://i.ibb.co/zT88dzBS/Black-White-Minimalist-Professional-Initial-Logo.png"
           alt="Charvika Designs logo"
         >
         <div class="brand-name">Charvika <span>Designs</span></div>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
         ☰
       </button>
 
@@ -858,7 +800,14 @@
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#why-us">Why Us</a>
-        <a href="#contact" class="nav-cta">Contact Us</a>
+        <a
+          href="https://www.instagram.com/charvika_designs/"
+          class="nav-cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Contact Us ↗
+        </a>
       </nav>
 
     </div>
@@ -869,7 +818,10 @@
     <div class="hero-inner">
 
       <div class="hero-content">
-        <span class="hero-label">Creative Website Design Studio</span>
+
+        <span class="hero-label">
+          Creative Website Design Studio
+        </span>
 
         <div class="banner-slider" id="bannerSlider">
 
@@ -916,8 +868,18 @@
         </div>
 
         <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Get Your Website</a>
-          <a href="#services" class="btn btn-outline">Explore Services</a>
+          <a
+            href="https://www.instagram.com/charvika_designs/"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Your Website ↗
+          </a>
+
+          <a href="#services" class="btn btn-outline">
+            Explore Services
+          </a>
         </div>
 
         <div class="slider-dots" id="sliderDots">
@@ -925,16 +887,20 @@
           <button class="slider-dot" aria-label="Slide 2"></button>
           <button class="slider-dot" aria-label="Slide 3"></button>
         </div>
+
       </div>
 
       <div class="hero-visual">
         <div class="hero-card">
+
           <img
             src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=85"
             alt="Modern website design displayed on a computer"
           >
+
           <h3>Creative Digital Solutions</h3>
           <p>Beautiful designs. Better online presence.</p>
+
         </div>
       </div>
 
@@ -947,7 +913,9 @@
 
       <div class="section-heading">
         <span class="section-tag">Our Services</span>
+
         <h2>What We Can Create for You</h2>
+
         <p>
           We provide creative digital solutions to help your business
           look professional and grow online.
@@ -1029,6 +997,7 @@
         </div>
 
         <div class="about-content">
+
           <span class="section-tag">About Us</span>
 
           <h2>
@@ -1055,7 +1024,15 @@
             <div class="about-point"><span>✓</span> Business-Focused</div>
           </div>
 
-          <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+          <a
+            href="https://www.instagram.com/charvika_designs/"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Let's Work Together ↗
+          </a>
+
         </div>
 
       </div>
@@ -1068,7 +1045,9 @@
 
       <div class="section-heading">
         <span class="section-tag">Why Choose Us</span>
+
         <h2>Design That Works for Your Business</h2>
+
         <p>
           We focus on creating a smooth experience for your
           customers and a professional identity for your business.
@@ -1111,12 +1090,23 @@
   <!-- CTA -->
   <section class="cta-section">
     <div class="container">
+
       <h2>Ready to Take Your Business Online?</h2>
+
       <p>
         Let's create a professional website that helps your
         business make a great first impression.
       </p>
-      <a href="#contact" class="btn">Start Your Project</a>
+
+      <a
+        href="https://www.instagram.com/charvika_designs/"
+        class="btn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Start Your Project ↗
+      </a>
+
     </div>
   </section>
 
@@ -1126,75 +1116,46 @@
 
       <div class="section-heading">
         <span class="section-tag">Contact Us</span>
+
         <h2>Let's Discuss Your Project</h2>
+
         <p>
-          Have an idea for your website? Send us a message
-          and let's bring it to life.
+          Have an idea for your website? Connect with us
+          on Instagram to discuss your requirements.
         </p>
       </div>
 
-      <div class="contact-grid">
+      <div class="contact-info">
 
-        <div class="contact-info">
-          <h3>Get in Touch</h3>
+        <h3>Get in Touch</h3>
 
-          <p>
-            Tell us about your business and the kind of website
-            you would like to create.
-          </p>
+        <p>
+          Tell us about your business and the kind of website
+          you would like to create.
+        </p>
 
-          <div class="contact-item">
-            <span>📧</span>
-            <div>Email us for project enquiries</div>
-          </div>
+        <div class="contact-item">
+          <span>📸</span>
 
-          <div class="contact-item">
-            <span>💬</span>
-            <div>Connect with us on WhatsApp</div>
-          </div>
-
-          <div class="contact-item">
-            <span>📸</span>
-            <div>
-              <a href="https://www.instagram.com/charvika_designs/"
-                 target="_blank" rel="noopener noreferrer">
-                @charvika_designs
-              </a>
-            </div>
+          <div>
+            <a
+              href="https://www.instagram.com/charvika_designs/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @charvika_designs
+            </a>
           </div>
         </div>
 
-        <form class="contact-form" id="contactForm">
-          <input
-            type="text"
-            id="customerName"
-            placeholder="Your Name"
-            required
-          >
-
-          <input
-            type="email"
-            id="customerEmail"
-            placeholder="Your Email"
-            required
-          >
-
-          <input
-            type="text"
-            id="businessName"
-            placeholder="Business Name"
-          >
-
-          <textarea
-            id="customerMessage"
-            placeholder="Tell us about your website requirements..."
-            required
-          ></textarea>
-
-          <button type="submit" class="btn btn-primary">
-            Send Message on WhatsApp
-          </button>
-        </form>
+        <a
+          href="https://www.instagram.com/charvika_designs/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+        >
+          Contact Us on Instagram ↗
+        </a>
 
       </div>
     </div>
@@ -1205,7 +1166,10 @@
     <div class="footer-grid">
 
       <div>
-        <div class="footer-brand">Charvika <span>Designs</span></div>
+        <div class="footer-brand">
+          Charvika <span>Designs</span>
+        </div>
+
         <p>
           Creative, modern and responsive websites for boutiques,
           restaurants and small businesses.
@@ -1214,138 +1178,47 @@
 
       <div>
         <h3>Quick Links</h3>
+
         <div class="footer-links">
           <a href="#home">Home</a>
           <a href="#services">Services</a>
           <a href="#about">About Us</a>
+          <a href="#why-us">Why Choose Us</a>
           <a href="#contact">Contact</a>
         </div>
       </div>
 
       <div>
         <h3>Follow Us</h3>
+
         <div class="footer-links">
-          <a href="https://www.instagram.com/charvika_designs/"
-             target="_blank" rel="noopener noreferrer">
-            Instagram
+          <a
+            href="https://www.instagram.com/charvika_designs/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram ↗
           </a>
-          <a href="#contact">Get a Website</a>
+
+          <a
+            href="https://www.instagram.com/charvika_designs/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get a Website ↗
+          </a>
         </div>
       </div>
 
     </div>
 
     <div class="footer-bottom">
-      © <span id="currentYear"></span> Charvika Designs. All rights reserved.
+      © <span id="currentYear"></span>
+      Charvika Designs. All rights reserved.
     </div>
   </footer>
 
-  <script>
-  /* MOBILE NAVIGATION */
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.getElementById("navLinks");
-
-  menuToggle.addEventListener("click", function () {
-    const isOpen = navLinks.classList.toggle("open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  document.querySelectorAll(".nav-links a").forEach(function (link) {
-    link.addEventListener("click", function () {
-      navLinks.classList.remove("open");
-      menuToggle.setAttribute("aria-expanded", "false");
-    });
-  });
-
-  /* CURRENT YEAR */
-  document.getElementById("currentYear").textContent =
-    new Date().getFullYear();
-
-  /* DASHBOARD CONTENT INTEGRATION */
-  const CONTENT_API =
-    "https://soft-rice-ec58charvika-dashboard-api.rushithadabbiru4.workers.dev/api/content";
-
-  async function loadDashboardContent() {
-    try {
-      const response = await fetch(CONTENT_API);
-
-      if (!response.ok) {
-        throw new Error("Dashboard content could not be loaded");
-      }
-
-      const data = await response.json();
-
-      const logo = data.logo || data.logoUrl || data.logo_url;
-      const about = data.about || data.aboutText || data.about_text;
-
-      if (logo && typeof logo === "string") {
-        document.getElementById("siteLogo").src = logo;
-      }
-
-      if (about && typeof about === "string") {
-        document.getElementById("aboutText").textContent = about;
-      }
-
-    } catch (error) {
-      console.log("Using default website content:", error.message);
-    }
-  }
-
-  loadDashboardContent();
-
-  /* BANNER SLIDER */
-  const slider = document.getElementById("bannerSlider");
-  const slides = slider.querySelectorAll(".banner-slide");
-  const dots = document.querySelectorAll(".slider-dot");
-
-  let current = 0;
-  let timer;
-
-  function showBanner(index) {
-    current = index;
-
-    slides.forEach(function (slide, i) {
-      slide.hidden = i !== current;
-    });
-
-    dots.forEach(function (dot, i) {
-      dot.classList.toggle("active", i === current);
-    });
-  }
-
-  function startTimer() {
-    clearInterval(timer);
-
-    timer = setInterval(function () {
-      showBanner((current + 1) % slides.length);
-    }, 5000);
-  }
-
-  dots.forEach(function (dot, index) {
-    dot.addEventListener("click", function () {
-      showBanner(index);
-      startTimer();
-    });
-  });
-
-  slider.addEventListener("mouseenter", function () {
-    clearInterval(timer);
-  });
-
-  slider.addEventListener("mouseleave", startTimer);
-
-  document.addEventListener("visibilitychange", function () {
-    if (document.hidden) {
-      clearInterval(timer);
-    } else {
-      startTimer();
-    }
-  });
-
-  showBanner(0);
-  startTimer();
-</script>
-
+  <!-- JAVASCRIPT -->
   <script>
     /* MOBILE NAVIGATION */
     const menuToggle = document.getElementById("menuToggle");
@@ -1363,48 +1236,13 @@
       });
     });
 
-    /* CONTACT FORM - WHATSAPP */
-    const contactForm = document.getElementById("contactForm");
-
-    contactForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const name = document.getElementById("customerName").value.trim();
-      const email = document.getElementById("customerEmail").value.trim();
-      const business = document.getElementById("businessName").value.trim();
-      const message = document.getElementById("customerMessage").value.trim();
-
-       // Add your WhatsApp number with country code
-
-      if (!whatsappNumber) {
-        alert("Please configure your WhatsApp number in the website code first.");
-        return;
-      }
-
-      const text = encodeURIComponent(
-        "Hello Charvika Designs!\n\n" +
-        "Name: " + name + "\n" +
-        "Email: " + email + "\n" +
-        "Business: " + business + "\n" +
-        "Requirements: " + message
-      );
-
-      window.open(
-        "https://wa.me/" + whatsappNumber + "?text=" + text,
-        "_blank"
-      );
-    });
-
     /* CURRENT YEAR */
     document.getElementById("currentYear").textContent =
       new Date().getFullYear();
 
-    /* DASHBOARD CONTENT INTEGRATION */
+    /* DASHBOARD ABOUT TEXT INTEGRATION */
     const CONTENT_API =
       "https://soft-rice-ec58charvika-dashboard-api.rushithadabbiru4.workers.dev/api/content";
-
-    const DEFAULT_LOGO =
-      "https://i.ibb.co/zT88dzBS/Black-White-Minimalist-Professional-Initial-Logo.png";
 
     async function loadDashboardContent() {
       try {
@@ -1416,19 +1254,20 @@
 
         const data = await response.json();
 
-        const logo = datconst whatsappNumber = "";a.logo || data.logoUrl || data.logo_url;
-        const about = data.about || data.aboutText || data.about_text;
-
-        if (logo && typeof logo === "string") {
-          document.getElementById("siteLogo").src = logo;
-        }
+        const about =
+          data.about ||
+          data.aboutText ||
+          data.about_text;
 
         if (about && typeof about === "string") {
           document.getElementById("aboutText").textContent = about;
         }
 
       } catch (error) {
-        console.log("Using default website content:", error.message);
+        console.log(
+          "Using default website content:",
+          error.message
+        );
       }
     }
 
